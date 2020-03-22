@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CalculadoraActivity"
+    android:layout_margin="10dp"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/output_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/teclado_layout"
+        android:layout_alignEnd="@id/teclado_layout"
+        android:textAlignment="textEnd"
+        android:text="@string/xxxx"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightGray"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/output_textview"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/teclado_layout">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/C"
+            android:textColor="@color/colorOrangeRed"
+            android:textSize="30sp"
+            android:id="@+id/zerar_button"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_7"
+            android:layout_below="@id/zerar_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/sete_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4"
+            android:layout_below="@id/sete_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/quatro_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1"
+            android:layout_below="@id/quatro_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/um_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:layout_below="@id/um_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/zero_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_ponto"
+            android:layout_toEndOf="@id/zerar_button"
+            android:layout_below="@id/um_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/ponto_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            android:layout_toEndOf="@id/zerar_button"
+            android:layout_below="@id/quatro_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/dois_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5"
+            android:layout_toEndOf="@id/zerar_button"
+            android:layout_below="@id/sete_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/cinco_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_8"
+            android:layout_toEndOf="@id/zerar_button"
+            android:layout_below="@id/zerar_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/oito_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_9"
+            android:layout_toEndOf="@id/ponto_button"
+            android:layout_below="@id/zerar_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/nove_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_6"
+            android:layout_toEndOf="@id/ponto_button"
+            android:layout_below="@id/sete_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/seis_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3"
+            android:layout_toEndOf="@id/ponto_button"
+            android:layout_below="@id/quatro_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/tres_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_igual"
+            android:layout_toEndOf="@id/ponto_button"
+            android:layout_below="@id/um_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/igual_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_dividir"
+            android:layout_toEndOf="@id/nove_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/dividir_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x"
+            android:layout_toEndOf="@id/nove_button"
+            android:layout_below="@id/zerar_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/multiplicar_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_subtrair"
+            android:layout_toEndOf="@id/nove_button"
+            android:layout_below="@id/sete_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/subtrair_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/zero_button"
+            android:text="@string/_adicionar"
+            android:layout_toEndOf="@id/nove_button"
+            android:layout_below="@id/quatro_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/somar_button"/>
+    </RelativeLayout>
+</RelativeLayout>
