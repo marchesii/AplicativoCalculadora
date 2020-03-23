@@ -21,6 +21,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
     private Button button_subtrair;
     private Button button_calcular;
     private Button button_ponto;
+    private Button button_limpar;
+    private Button button_potencia;
     private Button _0;
     private Button _1;
     private Button _2;
@@ -49,6 +51,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         button_calcular = findViewById(R.id.igual_button);
         textview_output = findViewById(R.id.output_textview);
         button_ponto = findViewById(R.id.ponto_button);
+        button_limpar = findViewById(R.id.limpar_button);
+        button_potencia = findViewById(R.id.potencia_button);
         botoes = new int[]{R.id.zero_button, R.id.um_button, R.id.dois_button, R.id.tres_button, R.id.quatro_button, R.id.cinco_button, R.id.seis_button, R.id.sete_button,R.id.oito_button, R.id.nove_button};
 
         for(int id : botoes){
@@ -56,6 +60,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
             v.setOnClickListener(this);
         }
 
+        button_limpar.setOnClickListener(this);
+        button_potencia.setOnClickListener(this);
         button_ponto.setOnClickListener(this);
         button_calcular.setOnClickListener(this);
         button_subtrair.setOnClickListener(this);
@@ -70,7 +76,6 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.zerar_button:
                 zerar();
-                textview_output.setText(String.format("%.2f", Calculadora.getInstance().calcular(Constantes.NULO, (Float.parseFloat(tela)))));
                 break;
             case R.id.multiplicar_button:
                 contar(Constantes.MULTIPLICACAO);
@@ -121,13 +126,23 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
             case R.id.nove_button:
                 atualizar(getString(R.string._9));
                 break;
+            case R.id.potencia_button:
+                contar(Constantes.POTENCIA);
+                break;
+            case R.id.limpar_button:
+                limpar();
+                textview_output.setText(String.format("%.2f", Float.parseFloat(tela)));
         }
     }
 
     private void zerar() {
         Calculadora.getInstance().c();
+        limpar();
+        textview_output.setText(String.format("%.2f", Calculadora.getInstance().calcular(Constantes.NULO, (Float.parseFloat(tela)))));
+    }
+
+    private void limpar() {
         tela = getString(R.string._0);
-        textview_output.setText(tela);
     }
 
     private void atualizar(String numero){

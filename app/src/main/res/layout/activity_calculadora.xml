@@ -188,5 +188,22 @@
             android:textColor="@color/colorBlack"
             android:textSize="30sp"
             android:id="@+id/somar_button"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ce"
+            android:layout_toEndOf="@id/zerar_button"
+            android:textColor="@color/colorOrangeRed"
+            android:textSize="30sp"
+            android:id="@+id/limpar_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_potencia"
+            android:layout_toEndOf="@id/limpar_button"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:id="@+id/potencia_button"/>
     </RelativeLayout>
 </RelativeLayout>
